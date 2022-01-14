@@ -24,34 +24,49 @@
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputFirstName" type="text"  name="nombre"/>
+                                                        <input class="form-control" id="inputFirstName" type="text"  name="nombre" maxlength="45"/>
                                                         <label for="inputFirstName">Nombre</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-floating">
-                                                        <input class="form-control" id="inputLastName" type="text" name="apellido"/>
+                                                        <input class="form-control" id="inputLastName" type="text" name="apellido" maxlength="45"/>
                                                         <label for="inputLastName">Apellido</label>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputEmail" type="email"  name="correo"/>
-                                                <label for="inputEmail">Correo</label>
+                                            <div class="row mb-3">
+                                                <div class="form-floating mb-3 col-md-6">
+                                                    <input class="form-control" id="inputEmail" type="email"  name="correo" maxlength="60"/>
+                                                    <label for="inputEmail">Correo</label>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        
+                                                        <select class="form-control" name="roll" id="" placeholder="Seleccione una opcion">
+                                                            <option value="1">Admin</option>
+                                                            <option value="2">Data Entry</option>
+
+                                                        </select>
+                                                        <label for="inputPasswordConfirm">Roll</label>
+                                                    </div>
+                                                </div>
                                             </div>
+                                            
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputPassword" type="password" name="password" />
+                                                        <input class="form-control" id="inputPassword" type="password" name="password" maxlength="60"/>
                                                         <label for="inputPassword">Contraseña</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputPasswordConfirm" type="password" name="rpassword" />
+                                                        <input class="form-control" id="inputPasswordConfirm" type="password" name="rpassword" maxlength="60"/>
                                                         <label for="inputPasswordConfirm">Confirma Contraseña</label>
                                                     </div>
                                                 </div>
+
                                             </div>
                                             <div class="mt-4 mb-0">
                                                 
@@ -71,5 +86,21 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
+        </html>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	
+    <% if(alert){%>
+      <script>
+        Swal.fire({
+          title:'<%= alertTitle %>',
+          text: '<%= alertMessage %>',
+          icon: '<%= alertIcon %>',
+          showConfirmButton: '<%= showConfirmButton %>',
+          timer: '<%= timer %>',
+        }).then(()=>{
+          window.location = '/<%= ruta %>'
+        })
+      </script>
+    '<% } %>'
     </body>
 </html>

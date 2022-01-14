@@ -7,17 +7,17 @@ const conexion = require('../database/db')
 //          Autenticacion
 //-------------------------------------
 router.get('/', (req,res)=>{
-    res.render('login')
+    res.render('login',{alert:false})
 })
 router.get('/password', (req,res)=>{
-    res.render('password')
+    res.render('password',{alert:false})
 })
 router.get('/register', (req,res)=>{
-    res.render('register')
+    res.render('register',{alert:false})
 })
 
 router.get('/index', (req,res)=>{
-    res.render('index')
+    res.render('index',{alert:false})
 })
 //-------------------------------------
 //          Paginas de error
