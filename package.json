@@ -1,13 +1,17 @@
 {
+  "engines": {
+    "node": "17.3.0"
+  },
   "name": "login",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Moises Lagos Fernandez",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
