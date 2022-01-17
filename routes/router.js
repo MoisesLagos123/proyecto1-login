@@ -38,5 +38,7 @@ router.get('/500', (req,res)=>{
 const authController = require('../controllers/authControler')
 
 router.post('/register', authController.registrarCliente)
+router.post('/', authController.login)
+
 
 module.exports = router
